@@ -13,7 +13,7 @@ minima:
   social_links:
     twitter: wrmultitudes
     github: multitudes
-    stackoverflow: "multitudes"
+    stackoverflow: multitudes
 
 # Set this to true to get LaTeX math equation support
 use_math: true
