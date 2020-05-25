@@ -1,4 +1,6 @@
-# About
+Hello and welcome to my blog.
+
+## About me
 
 
 >  “In the beginning there was nothing, which exploded.” <br> freely quoted from Terry Pratchett </br>
