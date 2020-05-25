@@ -1,6 +1,5 @@
----
-title: About
----
+# About
+
 
 >  “In the beginning there was nothing, which exploded.” <br> freely quoted from Terry Pratchett </br>
 
