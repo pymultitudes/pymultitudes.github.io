@@ -20,7 +20,7 @@ theme: minima
 social_links:
     twitter: wrmultitudes
     github: multitudes
-    stackoverflow: multitudes
+
 plugins:
   - jekyll-feed
   - jekyll-gist
