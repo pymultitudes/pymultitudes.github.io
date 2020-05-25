@@ -8,11 +8,7 @@
 
 title: We are multitudes!
 description: A blog about deep learning with Python and Tensorflow for Swift
-github_username: pymultitudes
 
-# Email and twitter are optional:
-email: wrmultitudes.com.
-twitter_username: wrmultitudes
 
 # Set this to true to get LaTeX math equation support
 use_math: true
