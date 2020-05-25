@@ -7,7 +7,9 @@
 # https://learnxinyminutes.com/docs/yaml/
 
 title: Laurent Brusa
-
+author:
+  name: Laurent Brusa
+  email: ""
 
 # Set this to true to get LaTeX math equation support
 use_math: true
@@ -16,7 +18,7 @@ use_math: true
 google_analytics:
 
 # Everything below here can be ignored, unless you want to change the theme entirely
-theme: minima
+minima:
 social_links:
     twitter: wrmultitudes
     github: multitudes
