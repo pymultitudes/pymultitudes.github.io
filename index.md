@@ -1,9 +1,8 @@
 
-Hello and welcome to my blog. 
-It will be mostly a technical blog about AI
+Hi there! My name is Laurent and I'm a Junior Developer based in Berlin. I like to program in Swift for iOS and enjoy studying about Deep Learning, and playing music in my free time.
 
 
 ## Blogging is fun!
 
-Here it starts!
+Here below are my blog posts!
 
