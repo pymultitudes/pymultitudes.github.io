@@ -4,5 +4,5 @@ Hi there! My name is Laurent and I'm a Junior Developer based in Berlin. I like 
 
 ## Blogging is fun!
 
-Here below are my blog posts!
+Here below are my blog posts.
 

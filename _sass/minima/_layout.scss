@@ -3,17 +3,18 @@ e/**
  */
 
 .site-header {
+  @include relative-font-size(1.625);
   border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
-  min-height: $spacing-unit * 1.865;
+  min-height: $spacing-unit * 2.865;
 
   // Positioning context for the mobile navigation icon
   position: relative;
 }
 
 .site-title {
-  @include relative-font-size(1.625);
-  font-weight: 300;
+  @include relative-font-size(2.625);
+  font-weight: 500;
   color: $text-color;
   line-height: $base-line-height * $base-font-size * 2.25;
   letter-spacing: 1px;
@@ -193,8 +194,11 @@ e/**
 }
 
 .post-list {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   margin-left: 0;
   list-style: none;
+  letter-spacing: 1px;
+  
 
   > li {
     margin-bottom: $spacing-unit;
@@ -218,12 +222,13 @@ e/**
  */
 .post-header {
   margin-bottom: $spacing-unit;
+  
 }
 
 .post-title {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  @include relative-font-size(2.625);
-  letter-spacing: -1px;
+  @include relative-font-size(1.625);
+  letter-spacing: 1px;
   line-height: 1;
 
   @include media-query($on-laptop) {
