@@ -7,9 +7,8 @@
 # https://learnxinyminutes.com/docs/yaml/
 
 title: Laurent Brusa
-author:
-  name: Laurent Brusa
-  email: ""
+author: ""
+
 
 # Set this to true to get LaTeX math equation support
 use_math: true
