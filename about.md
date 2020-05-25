@@ -3,7 +3,7 @@ Hello and welcome to my blog.
 ## About me
 
 
->  “In the beginning there was nothing, which exploded.” <br> freely quoted from Terry Pratchett </br>
+>  “In the beginning there was nothing, which exploded.” <figcaption>freely quoted from <strong>Terry Pratchett</strong></figcaption>
 
 
 I am a Junior developer with a lot of enthusiasm to learn more. I just finished my two years-long "Umschulung" for Software Developer in Berlin and got certified by the IHK, the German Chamber Of Commerce, in January 2020. 
