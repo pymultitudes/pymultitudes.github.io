@@ -11,13 +11,14 @@ e/**
 }
 
 .site-title {
-  @include relative-font-size(1.625);
-  font-weight: 300;
+  @include relative-font-size(2.625);
+  font-weight: 500;
+  color: #ddd ;
   line-height: $base-line-height * $base-font-size * 2.25;
-  letter-spacing: -1px;
+  letter-spacing: 1px;
   margin-bottom: 0;
   float: center;
-
+  font
   &,
   &:visited {
     color: $grey-color-dark;
