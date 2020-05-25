@@ -1,5 +1,3 @@
-Hello and welcome to my blog. 
+## A blog about Deep Learning and AI
 
-## Blogging is fun!
 
-Here it starts!
