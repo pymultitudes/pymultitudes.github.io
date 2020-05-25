@@ -12,6 +12,7 @@ e/**
 
 .site-title {
   @include relative-font-size(2.625);
+  
   font-weight: 500;
   color: $text-color
   line-height: $base-line-height * $base-font-size * 2.25;
@@ -40,6 +41,7 @@ e/**
 
   .page-link {
     text-decoration: none;
+    font-family: "Roboto Mono", monospace,-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
     color: $text-color;
     line-height: $base-line-height;
 
