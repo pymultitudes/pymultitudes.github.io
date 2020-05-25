@@ -7,7 +7,7 @@
 # https://learnxinyminutes.com/docs/yaml/
 
 title: We are Multitudes! 
-description: A blog about machine learning 
+description: A blog about deep learning with Python and Tensorflow for Swift
 github_username: pymultitudes
 
 # Email and twitter are optional:
