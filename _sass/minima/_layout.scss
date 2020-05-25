@@ -2,10 +2,6 @@ e/**
  * Site header
  */
 
-article {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
 .site-header {
   border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
@@ -17,7 +13,6 @@ article {
 
 .site-title {
   @include relative-font-size(1.625);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 300;
   color: $text-color;
   line-height: $base-line-height * $base-font-size * 2.25;
@@ -46,7 +41,6 @@ article {
 
   .page-link {
     text-decoration: none;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     color: $text-color;
     line-height: $base-line-height;
 
