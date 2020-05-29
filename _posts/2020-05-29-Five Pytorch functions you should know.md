@@ -24,7 +24,9 @@ In this notebook I will introduce you to 5 useful functions to deal with tensors
 
 ### Importing PyTorch and the necessary modules
 
+<div style="border-radius: 10px; align: center; overflow: hidden;">  
 <iframe src="https://jovian.ml/embed?url=https://jovian.ml/pymultitudes/01-tensor-operations/v/6&cellId=2" title="Jovian Viewer" height="177" width="800" frameborder="0" scrolling="auto" border-radius= "10px"></iframe>
+</div>
 
 Here below I will describe in details how to use the functions.
 
@@ -38,24 +40,26 @@ Returns the minimum value of all elements in the input tensor.
 `torch.min(input, dim, keepdim=False, out=None) -> (Tensor, LongTensor)`  
 Returns a namedtuple (values, indices) where values is the minimum value of each row of the input tensor in the given dimension dim. And indices is the index location of each minimum value found (argmin).
 If keepdim is True, the output tensors are of the same size as input except in the dimension dim where they are of size 1. 
-
+<div style="border-radius: 10px; align: center; overflow: hidden;">  
 <iframe src="https://jovian.ml/embed?url=https://jovian.ml/pymultitudes/01-tensor-operations/v/6&cellId=5" title="Jovian Viewer" height="235" width="800" frameborder="0" scrolling="auto"></iframe>
 
 <iframe src="https://jovian.ml/embed?url=https://jovian.ml/pymultitudes/01-tensor-operations/v/6&cellId=6" title="Jovian Viewer" height="143" width="800" frameborder="0" scrolling="auto"></iframe>
-
+</div>
 In the example above a tensor of shape 2, 4 (2 rows x 4 columns) has been reduced to a single row with the command `torch.min(a, 0)`, with `0` meaning the rows will be my axe, so it will return one row and the indices give me which row has the minimum, the first or the second in this case.
 
 #### torch.max(input) → Tensor  
 the max function below is similar to min therefore:  
 
+<div style="border-radius: 10px; align: center; overflow: hidden;">  
 <iframe src="https://jovian.ml/embed?url=https://jovian.ml/pymultitudes/01-tensor-operations/v/6&cellId=8" title="Jovian Viewer" height="185" width="800" frameborder="0" scrolling="auto"></iframe>
 
 <iframe src="https://jovian.ml/embed?url=https://jovian.ml/pymultitudes/01-tensor-operations/v/6&cellId=9" title="Jovian Viewer" height="143" width="800" frameborder="0" scrolling="auto"></iframe>
+</div>
 
 #### The following example will give an error
-
+<div style="border-radius: 10px; align: center; overflow: hidden;">  
 <iframe src="https://jovian.ml/embed?url=https://jovian.ml/pymultitudes/01-tensor-operations/v/6&cellId=11" title="Jovian Viewer" height="null" width="800" frameborder="0" scrolling="auto"></iframe>
-
+</div>
 
 This is because both min() and max() take a certain amount of parameters and at least one, which is the input tensor. The format is `max(Tensor input, int dim, bool keepdim)`, so the third parameter if present needs to be a `Boolean`. 
 
