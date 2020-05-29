@@ -1,5 +1,5 @@
 
-# Five Pytorch functions you should know
+# Five PyTorch functions you should know
 
 Here's the table of contents:
 
@@ -63,8 +63,9 @@ the max function below is similar to min therefore:
 
 This is because both min() and max() take a certain amount of parameters and at least one, which is the input tensor. The format is `max(Tensor input, int dim, bool keepdim)`, so the third parameter if present needs to be a `Boolean`. 
 
+<div style="border-radius: 10px; align: center; overflow: hidden;">  
 <iframe src="https://jovian.ml/embed?url=https://jovian.ml/pymultitudes/01-tensor-operations/v/6&cellId=13" title="Jovian Viewer" height="159" width="800" frameborder="0" scrolling="auto"></iframe>
-
+</div>
 
 
 
