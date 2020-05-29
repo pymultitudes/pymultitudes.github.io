@@ -24,7 +24,7 @@ In this notebook I will introduce you to 5 useful functions to deal with tensors
 
 ### Importing PyTorch and the necessary modules
 
-<iframe src="https://jovian.ml/embed?url=https://jovian.ml/pymultitudes/01-tensor-operations/v/6&cellId=2" title="Jovian Viewer" height="177" width="800" frameborder="0" scrolling="auto"></iframe>
+<iframe src="https://jovian.ml/embed?url=https://jovian.ml/pymultitudes/01-tensor-operations/v/6&cellId=2" title="Jovian Viewer" height="177" width="800" frameborder="0" scrolling="auto" border-radius= "10px"></iframe>
 
 Here below I will describe in details how to use the functions.
 
@@ -60,6 +60,8 @@ the max function below is similar to min therefore:
 This is because both min() and max() take a certain amount of parameters and at least one, which is the input tensor. The format is `max(Tensor input, int dim, bool keepdim)`, so the third parameter if present needs to be a `Boolean`. 
 
 <iframe src="https://jovian.ml/embed?url=https://jovian.ml/pymultitudes/01-tensor-operations/v/6&cellId=13" title="Jovian Viewer" height="159" width="800" frameborder="0" scrolling="auto"></iframe>
+
+
 
 
 <!--
