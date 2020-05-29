@@ -153,20 +153,14 @@ This function returns a new tensor with the same data as the input tensor with a
 The returned tensor shares the same data and must have the same number of elements, but may have a different size.
 <div style="border-radius: 10px; align: center; overflow: hidden;"> 
 <iframe src="https://jovian.ml/embed?url=https://jovian.ml/pymultitudes/01-tensor-operations/v/6&cellId=45" title="Jovian Viewer" height="230" width="800" frameborder="0" scrolling="auto"></iframe>
+<iframe src="https://jovian.ml/embed?url=https://jovian.ml/pymultitudes/01-tensor-operations/v/6&cellId=20" title="Jovian Viewer" height="151" width="800" frameborder="0" scrolling="auto"></iframe>
 </div>
-
-# Example 2  
-# I can change the shape keeping the same number of elements. y will have size [16]
-y = x.view(16)
-y.size
-y
 
 This example will not work!
 
-# Example 3 - breaking 
-z = x.view(3, 8)
-z
-
+<div style="border-radius: 10px; align: center; overflow: hidden;"> 
+<iframe src="https://jovian.ml/embed?url=https://jovian.ml/pymultitudes/01-tensor-operations/v/6&cellId=48" title="Jovian Viewer" height="280" width="800" frameborder="0" scrolling="auto"></iframe>
+</div>
 
 If my new size doesn't match the number of elements I will have an error. Because a shape of 3 by 8 has 24 elements,  I cannot match the 4x4 (16 elements) shape of my original tensor
 
