@@ -85,7 +85,8 @@ We can see that for inputs very close to zero the output is almost the same but 
 <iframe src="https://jovian.ml/embed?url=https://jovian.ml/pymultitudes/01-tensor-operations/v/6&cellId=20" title="Jovian Viewer" height="151" width="800" frameborder="0" scrolling="auto"></iframe>
 </div>
 
-For very big positive or negative number the output grows asymptotically to 1 or minus 1. Here below it is automatically rounded.
+For very big positive or negative number the output grows asymptotically to 1 or minus 1. Sometimes we need to map the output values in between -1 to 1 like yes or no, and this is why we use activation functions like `tanh()` with Neural Networks.  
+
 
 <div style="border-radius: 10px; align: center; overflow: hidden;">  
 <iframe src="https://jovian.ml/embed?url=https://jovian.ml/pymultitudes/01-tensor-operations/v/6&cellId=22" title="Jovian Viewer" height="151" width="800" frameborder="0" scrolling="auto"></iframe>
