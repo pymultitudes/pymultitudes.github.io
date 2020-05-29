@@ -67,6 +67,126 @@ This is because both min() and max() take a certain amount of parameters and at 
 <iframe src="https://jovian.ml/embed?url=https://jovian.ml/pymultitudes/01-tensor-operations/v/6&cellId=13" title="Jovian Viewer" height="159" width="800" frameborder="0" scrolling="auto"></iframe>
 </div>
 
+## Function 2 - torch.tanh(input, out=None) → Tensor
+
+The `tanh` function is often used in Deep Learning. It stays for `hyperbolic tangent` and returns a non linear output between -1 and 1. It is also used as an activation function.  
+
+I will first show the shape of the `tanh` using matplotlib, a library for plotting graphs
+
+<div style="border-radius: 10px; align: center; overflow: hidden;">  
+<iframe src="https://jovian.ml/embed?url=https://jovian.ml/pymultitudes/01-tensor-operations/v/6&cellId=16" title="Jovian Viewer" height="492" width="800" frameborder="0" scrolling="auto"></iframe>
+<iframe src="https://jovian.ml/embed?url=https://jovian.ml/pymultitudes/01-tensor-operations/v/6&cellId=17" title="Jovian Viewer" height="171" width="800" frameborder="0" scrolling="auto"></iframe>
+<iframe src="https://jovian.ml/embed?url=https://jovian.ml/pymultitudes/01-tensor-operations/v/6&cellId=18" title="Jovian Viewer" height="122" width="800" frameborder="0" scrolling="auto"></iframe>
+</div>
+
+We can see that for inputs very close to zero the output is almost the same but grows rapidly but never get bigger than 1 or minus 1. 
+
+<div style="border-radius: 10px; align: center; overflow: hidden;">  
+<iframe src="https://jovian.ml/embed?url=https://jovian.ml/pymultitudes/01-tensor-operations/v/6&cellId=20" title="Jovian Viewer" height="151" width="800" frameborder="0" scrolling="auto"></iframe>
+</div>
+
+For very big positive or negative number the output grows asymptotically to 1 or minus 1. Here below it is automatically rounded.
+
+<div style="border-radius: 10px; align: center; overflow: hidden;">  
+<iframe src="https://jovian.ml/embed?url=https://jovian.ml/pymultitudes/01-tensor-operations/v/6&cellId=22" title="Jovian Viewer" height="151" width="800" frameborder="0" scrolling="auto"></iframe>
+</div>
+The `tahn()` function is often used as an activator function in Deep Learning together with the `sigmoid` function and the `ReLu`. It is considered to be better than the `sigmoid` function because of a steeper curve for small values close to zero and it is also sigmoidal (s-shaped). It is a very robust function and cannot be broken easily unless we give a non-numeric input, this would be the only way to get an error message.  
+The output type is `torch.float32`
+
+## Function 3 - torch.item() → number and torch.tolist() 
+
+This function returns the tensor as a (nested) list as a standard Python number. For scalars, a standard Python number is returned, just like with `item()`. 
+
+
+<div style="border-radius: 10px; align: center; overflow: hidden;">  
+<iframe src="https://jovian.ml/embed?url=https://jovian.ml/pymultitudes/01-tensor-operations/v/6&cellId=25" title="Jovian Viewer" height="195" width="800" frameborder="0" scrolling="auto"></iframe>
+<iframe src="https://jovian.ml/embed?url=https://jovian.ml/pymultitudes/01-tensor-operations/v/6&cellId=26" title="Jovian Viewer" height="162" width="800" frameborder="0" scrolling="auto"></iframe>
+</div>
+
+As in the example above we see that both methods can be applied to a tensor containing a single element.
+
+<div style="border-radius: 10px; align: center; overflow: hidden;">  
+<iframe src="https://jovian.ml/embed?url=https://jovian.ml/pymultitudes/01-tensor-operations/v/6&cellId=28" title="Jovian Viewer" height="202" width="800" frameborder="0" scrolling="auto"></iframe>
+</div>
+
+In this case our input tensor has more than one item so we get a python (nested) list as output.
+
+<div style="border-radius: 10px; align: center; overflow: hidden;">  
+<iframe src="https://jovian.ml/embed?url=https://jovian.ml/pymultitudes/01-tensor-operations/v/6&cellId=30" title="Jovian Viewer" height="242" width="800" frameborder="0" scrolling="auto"></iframe>
+</div>
+I could not find a way to break this function as long as the input tensors have a valid value. 
+
+#### When to use
+
+It is useful for the case when I have the output values in a tensor type and need to translate those to a pure python environment. 
+
+## Function 4 - torch.isnan()
+
+Returns a new tensor with boolean elements representing if each element is NaN or not.
+
+<div style="border-radius: 10px; align: center; overflow: hidden;">  
+<iframe src="https://jovian.ml/embed?url=https://jovian.ml/pymultitudes/01-tensor-operations/v/6&cellId=34" title="Jovian Viewer" height="134" width="800" frameborder="0" scrolling="auto"></iframe>
+</div>
+
+My output is a new tensor with the same dimension of the input containing only Boolean values. Using `isnan()` I can verify only the `nan` case. If I have an `inf`input it will not be returned true. 
+
+<div style="border-radius: 10px; align: center; overflow: hidden;"> 
+<iframe src="https://jovian.ml/embed?url=https://jovian.ml/pymultitudes/01-tensor-operations/v/6&cellId=37" title="Jovian Viewer" height="134" width="800" frameborder="0" scrolling="auto"></iframe>
+</div>
+
+For infinity values I need another function `isinf()`
+<div style="border-radius: 10px; align: center; overflow: hidden;"> 
+<iframe src="https://jovian.ml/embed?url=https://jovian.ml/pymultitudes/01-tensor-operations/v/6&cellId=40" title="Jovian Viewer" height="null" width="800" frameborder="0" scrolling="auto"></iframe>
+</div>
+
+# Example 3 - breaking 
+
+I could not find an example to break this method
+
+#### When to use
+It is useful when I want to make sure that my input data doesn't contain values that could bring errors and detect `nan` or `inf` types in my dataset.
+
+## Function 5 - torch.view(*shape) → Tensor
+
+This function returns a new tensor with the same data as the input tensor with a different shape.
+
+The returned tensor shares the same data and must have the same number of elements, but may have a different size.
+<div style="border-radius: 10px; align: center; overflow: hidden;"> 
+<iframe src="https://jovian.ml/embed?url=https://jovian.ml/pymultitudes/01-tensor-operations/v/6&cellId=45" title="Jovian Viewer" height="230" width="800" frameborder="0" scrolling="auto"></iframe>
+</div>
+
+# Example 2  
+# I can change the shape keeping the same number of elements. y will have size [16]
+y = x.view(16)
+y.size
+y
+
+This example will not work!
+
+# Example 3 - breaking 
+z = x.view(3, 8)
+z
+
+
+If my new size doesn't match the number of elements I will have an error. Because a shape of 3 by 8 has 24 elements,  I cannot match the 4x4 (16 elements) shape of my original tensor
+
+#### When to use
+
+A common issue with designing Neural Networks is when the output tensor of one layer is having the wrong shape to act as the input tensor to the next layer.
+
+Sometimes we need to explicitly reshape tensors and we can use the view function to achieve this.
+
+## Conclusion
+
+These are just 5 functions selected from the many available in the PyTorch documentation showcasing the versatility of this library. There is still much more to discover.
+
+## Reference Links
+
+* Official documentation for `torch.Tensor`: https://pytorch.org/docs/stable/tensors.html
+* Plotting the tanh function: https://www.geeksforgeeks.org/numpy-tanh-python/
+
+
+
 
 
 <!--
