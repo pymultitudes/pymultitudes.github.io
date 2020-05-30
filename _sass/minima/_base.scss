@@ -1,8 +1,7 @@
 /**
  * Reset some basic elements
  */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
+body, p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
   margin: 0;
   padding: 0;
@@ -40,7 +39,9 @@ ul, ol, dl, figure,
   margin-bottom: $spacing-unit / 2;
 }
 
-
+h3 {
+  padding-top: 1.5em;
+}
 
 /**
  * `main` element
@@ -95,6 +96,7 @@ li {
  */
 h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;
+
 }
 
 
@@ -128,13 +130,15 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: $grey-color;
+  color: $grey-color-light;
   border-left: 4px solid $grey-color-light;
   padding-left: $spacing-unit / 2;
   @include relative-font-size(1.125);
-  letter-spacing: -1px;
+  letter-spacing: 1px;
   font-style: italic;
-
+  padding-top: $spacing-unit/3;
+  padding-bottom: $spacing-unit/3;
+  background-color: #222222;
   > :last-child {
     margin-bottom: 0;
   }
