@@ -8,7 +8,7 @@ Here's the table of contents:
 
 ### Introducing PyTorch tensor operations
 
-PyTorch is a widely used, open-source deep learning platform which has been developed by the Facebook AI Research (FAIR) team, back in early 2017.
+PyTorch is a widely used, open-source deep learning platform which has been developed by the Facebook AI Research (FAIR) team, back in early 2017. PyTorch is a library for Python not a framework :)
 
 Tensor operations are at the core of everything we do in Deep Learning and PyTorch is one of the main Python libraries to facilitate tensor operations. 
 
