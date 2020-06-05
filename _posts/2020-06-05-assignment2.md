@@ -1,12 +1,11 @@
 # Kaggle dataset: predict the water temperature based on salinity
 
+
 > The CalCOFI data set represents the longest (1949-present) and most complete (more than 50,000 sampling stations) time series of oceanographic and larval fish data in the world. It includes abundance data on the larvae of over 250 species of fish; larval length frequency data and egg abundance data on key commercial species; and oceanographic and plankton data. The physical, chemical, and biological data collected at regular time and space intervals quickly became valuable for documenting climatic cycles in the California Current and a range of biological responses to them. 
 
+### Is there a relationship between water salinity & water temperature?
+
 CalCOFI: Over 60 years of oceanographic data: Is there a relationship between water salinity & water temperature? Can you predict the water temperature based on salinity? I took the data from the Kaggle website: and ran the notebook on Kaggle with the CalCOFI data files provided. 
-
-This is the link to the notebook on [Jovian](https://jovian.ml/pymultitudes/jovian-assignment-2/v/15)
-And this is the Kaggle site where you can find the input dataset: [https://www.kaggle.com/sohier/calcofi](https://www.kaggle.com/sohier/calcofi) 
-
 
 ### Download and explore the dataset
 
@@ -24,8 +23,8 @@ I can now see that I have some columns which contain not numeric values, which a
  <img src="/images/CalCOFI/image1.png" width="750" title="vs code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </p> 
 
-Most importantly the columns that are the most important for my model contain some few NaN values too! 
-I remove those rows first. So I copy the dataset taking away any row which shows as NaN in the two columns: "Saltiness" and "Temperature" (as `Salnty` and `T_degC` in the dataset). 
+And I noticed browsing the data that the columns that are the most important for my model, contain some few NaN values too! 
+I will remove those rows first. So I make a copy of the dataset taking away any row, which shows as NaN in the two columns: "Saltiness" and "Temperature" in the dataset ( `Salnty` and `T_degC`). 
 I do a sanity check and print the number of rows left after every operation. 
 
 ```python
@@ -36,24 +35,23 @@ print("rows are now ", len(df))
 df.head()
 ```
 
-I had a few rows with NaNs in the temperature and salinity columns which I now have taken out, I get now 675 rows.
+I had a few rows with NaNs in the temperature and salinity columns which I now have taken out; I get now 675 rows.
 
 Also, I want to have only the columns with numerical data. I am not interested in Strings and ids for this dataset.
+There is a handy function for this: 
 
 ```python
 df = df._get_numeric_data()
 ```
 
-I define my output column.
+I will define my output column. The inputs will be all my columns except the temperature column which is my output or target:
+
 ```python
 output_cols = ['T_degC']
-```
-The inputs will be all my columns except the temperature column which is the output or target as above:
-```python
 input_cols = df.columns[df.columns!='T_degC']
 ```
 
-So finally I have my pandas inputs and outputs and my dataset is looking better. Here are the first 5 rows below:
+So finally I have my pandas inputs and outputs and my dataset is looking better. You can see the first 5 rows below:
 
 <p align="center">
  <img src="/images/CalCOFI/image2.png" width="750" title="vs code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -61,7 +59,7 @@ So finally I have my pandas inputs and outputs and my dataset is looking better.
 
 ### Inspect relationships between the data
 
-I am interested in the relationship between the data I extracted from the dataset. The inputs are the saltiness of the water and the depth. I want to create a model able to predict the temperature.
+I am interested to observe the relationship between the data I extracted from the dataset. The inputs are the saltiness of the water and the depth and a few other variables. I want to create a model able to predict the temperature.
 
 I make a scatter plot to see any visual relationship between the data with the `seaborn` library for python.
 
@@ -226,10 +224,15 @@ These are the results for some individual inputs. It is not bad for a first run 
 
 I never could have imagined that there is a correlation between the salinity and the temperature of the sea. I believe that the results are partially combined with the depth at which the samples were taken. The difference due to the salinity of the water is probably so small that my model would not be able to capture accurately. Also, I noticed that much of the data has quite a lot of noise, so I am not at all sure that am accurate model can even be created. 
 
+
+
+### Resources
+
+
+This is the link to the notebook on [Jovian](https://jovian.ml/pymultitudes/jovian-assignment-2/v/15)
+And this is the Kaggle site where you can find the input dataset: [https://www.kaggle.com/sohier/calcofi](https://www.kaggle.com/sohier/calcofi) 
+
 I enjoyed this exercise as part of the assignment of week two of the [freecodecamp](https://www.freecodecamp.org/) course in collaboration with [Jovian](https://jovian.ml/): [Deep Learning with PyTorch: Zero to GANs](https://jovian.ml/forum/c/pytorch-zero-to-gans/18)
-
-
-
 
 
 <!--
