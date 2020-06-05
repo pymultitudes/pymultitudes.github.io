@@ -84,7 +84,7 @@ inputs_array = df[input_cols].to_numpy()
 targets_array = df[output_cols].to_numpy()
 ```
 
-and to torch tensors. I need to make sure that the data type is torch.float32.
+And then to torch tensors. I also need to make sure that the data type is torch.float32.
 
 ```python
 dtype = torch.float32
@@ -116,7 +116,7 @@ val_loader = DataLoader(val_ds, batch_size)
 
 ### Create a Linear Regression Model
 
-Finally, after all this preparation we create a model. It is a linear regression because we want to predict a continuous value, which is the temperature. We have quite a few inputs but clearly, the salinity and the depth are the most important. 
+Finally, after all the preparation we create a model. It is a linear regression because we want to predict a continuous value, which is the temperature. We have quite a few inputs but clearly, the salinity and the depth are the most important for us. 
 
 This class will initialize our model like we did in the previous notebook: 
 
